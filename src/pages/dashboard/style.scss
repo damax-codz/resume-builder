@@ -1,0 +1,118 @@
+@mixin font($f, $s, $w, $size, $c) {
+  font-family: $f;
+  font-style: $s;
+  font-weight: $w;
+  font-size: $size;
+  color: $c;
+}
+
+.fill_wrapper {
+  .form_wrapper {
+    margin-top: 50px;
+    .names {
+      display: flex;
+      width: 100%;
+      gap: 12px;
+    }
+    .rdw-editor-wrapper {
+      max-width: 800px;
+      margin-bottom: 10px;
+      .rdw-editor-main {
+        background-color: white;
+        min-height: 200px;
+        border: 1px solid rgba(0, 0, 0, 0.206);
+        border-radius: 8px;
+        padding: 20px 10px;
+        @include font(Montserrat, normal, 600, 18px, #33343d);
+      }
+    }
+    .input_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 20px;
+      label {
+        @include font(Montserrat, normal, 500, 14px, #344054);
+        margin-bottom: 6px;
+      }
+      input,
+      textarea {
+        padding: 20px 10px;
+        border: 1px solid rgba(0, 0, 0, 0.206);
+        width: 100%;
+        border-radius: 8px;
+        box-sizing: border-box;
+        @include font(Montserrat, normal, 600, 18px, #33343d);
+        &:focus {
+          outline: none;
+          border: 1px solid rgba(0, 0, 0, 0.376);
+        }
+        &::placeholder {
+          @include font(Montserrat, normal, 600, 18px, #33343d61);
+        }
+      }
+      textarea {
+        resize: none;
+        height: 120px;
+      }
+      .error_message {
+        @include font(Montserrat, normal, 400, 13px, rgb(221, 8, 8));
+      }
+    }
+    .add_wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      button {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        cursor: pointer;
+        p {
+          @include font(Montserrat, normal, 600, 18px, #33343d9f);
+        }
+      }
+    }
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      button {
+        padding: 10px 10px;
+        @include font(Montserrat, normal, 600, 18px, #ffffff);
+        background-color: #7e3af2;
+        border: 1px solid #7e3af2;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .back {
+        background-color: #ffffff;
+        color: #33343d61;
+        border: 1px solid rgba(0, 0, 0, 0.206);
+      }
+    }
+    .competence_wrapper {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      max-width: 800px;
+      flex-wrap: wrap;
+      .wrapper_ {
+        padding: 10px 15px;
+        background-color: #7f7f868d;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        .key {
+          @include font(Montserrat, normal, 500, 14px, #0000009f);
+        }
+      }
+    }
+  }
+}

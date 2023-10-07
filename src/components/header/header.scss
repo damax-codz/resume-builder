@@ -1,0 +1,22 @@
+@mixin font($f, $s, $w, $size, $c) {
+  font-family: $f;
+  font-style: $s;
+  font-weight: $w;
+  font-size: $size;
+  color: $c;
+}
+
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  gap: 12px;
+  .title {
+    @include font(Montserrat, normal, 700, 40px, #33343d);
+  }
+  .description {
+    @include font(Montserrat, normal, 400, 18px, #33343da0);
+    max-width: 800px;
+  }
+}

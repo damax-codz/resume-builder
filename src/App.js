@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Competence from "./pages/dashboard/competence/Competence";
+import Contact from "./pages/dashboard/contact/Contact";
+import Experience from "./pages/dashboard/experience/Experience";
+import Role from "./pages/dashboard/role/Role";
+import Loading from "./pages/loading/Loading";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Loading />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route
+              index
+              path="/dashboard/contact"
+              element={<Contact />}
+            ></Route>
+            <Route index path="/dashboard/role" element={<Role />}></Route>
+            <Route
+              index
+              path="/dashboard/competence"
+              element={<Competence />}
+            ></Route>
+            <Route
+              index
+              path="/dashboard/experience"
+              element={<Experience />}
+            ></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
