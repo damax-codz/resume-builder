@@ -35,7 +35,7 @@ export default function Nav() {
     },
     {
       name: "Education",
-      link: "/dashboard/about",
+      link: "/dashboard/education",
       icon: <SchoolIcon />,
     },
   ];

@@ -4,6 +4,8 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import "./../style.scss";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addRole } from "../../../redux/resumeSlice";
 
 export default function Role() {
   const schema = Yup.object().shape({
@@ -11,6 +13,8 @@ export default function Role() {
     description: Yup.string().required("This field is required !"),
   });
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   return (
     <div className="fill_wrapper">
       <Header
@@ -25,6 +29,7 @@ export default function Role() {
         }}
         onSubmit={async (values) => {
           navigate("/dashboard/competence");
+          dispatch(addRole(values));
         }}
         validationSchema={schema}
       >

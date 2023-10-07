@@ -115,4 +115,64 @@
       }
     }
   }
+  .experience_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    max-width: 800px;
+    .experiences {
+      width: 100%;
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.206);
+      border-radius: 8px;
+      box-sizing: border-box;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      text-align: start;
+      .role {
+        @include font(Montserrat, normal, 500, 18px, #000000e0);
+      }
+      .date {
+        @include font(Montserrat, normal, 400, 16px, #000000e0);
+      }
+      .description {
+        @include font(Montserrat, normal, 400, 16px, #00000063);
+      }
+    }
+    button {
+      padding: 10px 10px;
+      @include font(Montserrat, normal, 600, 18px, #000000a1);
+      background-color: white;
+      border: 1px dashed #000000a1;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      button {
+        padding: 10px 10px;
+        @include font(Montserrat, normal, 600, 18px, #ffffff);
+        background-color: #7e3af2;
+        border: 1px solid #7e3af2;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .back {
+        background-color: #ffffff;
+        color: #33343d61;
+        border: 1px solid rgba(0, 0, 0, 0.206);
+      }
+    }
+  }
 }

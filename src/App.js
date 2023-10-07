@@ -2,6 +2,7 @@ import "./App.css";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Competence from "./pages/dashboard/competence/Competence";
 import Contact from "./pages/dashboard/contact/Contact";
+import Education from "./pages/dashboard/education/Education";
 import Experience from "./pages/dashboard/experience/Experience";
 import Role from "./pages/dashboard/role/Role";
 import Loading from "./pages/loading/Loading";
@@ -29,6 +30,11 @@ function App() {
               index
               path="/dashboard/experience"
               element={<Experience />}
+            ></Route>
+            <Route
+              index
+              path="/dashboard/education"
+              element={<Education />}
             ></Route>
           </Route>
         </Routes>

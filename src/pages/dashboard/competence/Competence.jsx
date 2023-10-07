@@ -1,18 +1,19 @@
 import React from "react";
 import Header from "../../../components/header/Header";
 import { Formik } from "formik";
-import * as Yup from "yup";
 import "./../style.scss";
 import { useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 import ClearIcon from "@mui/icons-material/Clear";
 import { IconButton } from "@mui/material";
-import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { addCompetencies } from "../../../redux/resumeSlice";
 
 export default function Competence() {
   const navigate = useNavigate();
   const [competencies, setCompetencies] = useState([]);
+  const dispatch = useDispatch();
 
   function removeItem(name) {
     const updatedItems = competencies.filter((item) => item !== name);
@@ -30,7 +31,10 @@ export default function Competence() {
           competence: "",
         }}
         onSubmit={async (values, { resetForm }) => {
-          setCompetencies([...competencies, values.competence]);
+          if (values.competence !== "") {
+            setCompetencies([...competencies, values.competence]);
+          } else {
+          }
           resetForm();
         }}
       >
@@ -90,7 +94,10 @@ export default function Competence() {
               </button>
               <button
                 type="button"
-                onClick={() => navigate("/dashboard/experience")}
+                onClick={() => {
+                  navigate("/dashboard/experience");
+                  dispatch(addCompetencies(competencies));
+                }}
               >
                 Save and continue
               </button>

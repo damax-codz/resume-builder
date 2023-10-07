@@ -4,6 +4,8 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import "./../style.scss";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addContactInfo } from "../../../redux/resumeSlice";
 
 export default function Contact() {
   const schema = Yup.object().shape({
@@ -16,6 +18,7 @@ export default function Contact() {
     address: Yup.string().required("This field is required !"),
   });
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div className="fill_wrapper">
       <Header
@@ -33,6 +36,7 @@ export default function Contact() {
         }}
         onSubmit={async (values) => {
           navigate("/dashboard/role");
+          dispatch(addContactInfo(values));
         }}
         validationSchema={schema}
       >
@@ -124,7 +128,7 @@ export default function Contact() {
               )}
             </div>
             <div className="btn">
-              <button>Save and continue</button>
+              <button type="submit">Save and continue</button>
             </div>
           </form>
         )}
