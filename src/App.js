@@ -1,4 +1,5 @@
-import "./App.css";
+import "./App.scss";
+import Resume from "./components/dialog/Resume";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Competence from "./pages/dashboard/competence/Competence";
 import Contact from "./pages/dashboard/contact/Contact";
@@ -37,6 +38,7 @@ function App() {
               element={<Education />}
             ></Route>
           </Route>
+          <Route index path="/resume" element={<Resume />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

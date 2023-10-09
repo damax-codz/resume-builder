@@ -1,0 +1,141 @@
+@mixin font($f, $s, $w, $size, $c) {
+  font-family: $f;
+  font-style: $s;
+  font-weight: $w;
+  font-size: $size;
+  color: $c;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.resume_wrapper {
+  padding: 50px;
+  hr {
+    margin: 30px 0px;
+  }
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .name {
+      text-transform: capitalize;
+      @include font("Crimson Pro", normal, 400, 38px, #000000);
+      .fname {
+        @include font("Crimson Pro", normal, 400, 38px, #ff5757);
+      }
+    }
+    .tel_mail,
+    .address {
+      @include font("Roboto", normal, 400, 16px, #000000);
+    }
+  }
+  .role {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    .title {
+      @include font("Crimson Pro", normal, 400, 20px, #000000);
+      text-transform: uppercase;
+    }
+    .description {
+      @include font("Roboto", italic, 400, 16px, #000000);
+    }
+  }
+  .competencies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .title {
+      @include font("Crimson Pro", normal, 400, 20px, #000000);
+      text-transform: uppercase;
+    }
+    .keys {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      text-align: center;
+      .item {
+        @include font("Roboto", normal, 400, 16px, #000000);
+      }
+    }
+  }
+  .experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .title {
+      @include font("Crimson Pro", normal, 400, 20px, #000000);
+      text-transform: uppercase;
+    }
+    .experience_ {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .name_date {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .company_name,
+      .date {
+        @include font("Roboto", normal, 500, 16px, #000000);
+      }
+    }
+    .role {
+      @include font("Roboto", normal, 500, 16px, #000000);
+    }
+    .description {
+      @include font("Roboto", normal, 400, 16px, #000000);
+      margin-top: 8px;
+    }
+    .accomplishment {
+      margin-top: 15px;
+      .accomplishment_ {
+        @include font("Roboto", normal, 400, 16px, #000000);
+        text-align: start;
+      }
+    }
+  }
+  .education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    .title {
+      @include font("Crimson Pro", normal, 400, 20px, #000000);
+      text-transform: uppercase;
+    }
+    .description {
+      @include font("Roboto", italic, 400, 16px, #000000);
+    }
+    .edu_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      .institution {
+        @include font("Roboto", normal, 500, 16px, #000000);
+      }
+      .degree {
+        @include font("Roboto", normal, 400, 16px, #000000);
+      }
+    }
+  }
+}

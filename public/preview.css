@@ -1,0 +1,385 @@
+.preview_wrapper .MuiPaper-root {
+  min-width: 60%;
+  background-color: white;
+}
+.preview_wrapper .MuiPaper-root .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  background-color: rgba(51, 52, 61, 0.1450980392);
+  align-items: center;
+}
+.preview_wrapper .MuiPaper-root .header .title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #33343d;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper {
+  padding: 50px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper hr {
+  margin: 30px 0px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .contact_info .name {
+  text-transform: capitalize;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .contact_info .name .fname {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  color: #ff5757;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .contact_info .tel_mail,
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .contact_info .address {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .role .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .role .description {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .competencies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .competencies .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .competencies .keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  text-align: center;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .competencies .keys .item {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .experience_ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .name_date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .name_date .company_name,
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .name_date .date {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .role {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .description {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 8px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .accomplishment {
+  margin-top: 15px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .experience .accomplishment .accomplishment_ {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  text-align: start;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .education .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .education .description {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .education .edu_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .education .edu_wrapper .institution {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.preview_wrapper .MuiPaper-root .tox-tinymce .tox-editor-container .tox-sidebar-wrap .tox-edit-area iframe html body .resume_wrapper .education .edu_wrapper .degree {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+.resume_wrapper {
+  padding: 50px;
+}
+.resume_wrapper hr {
+  margin: 30px 0px;
+}
+.resume_wrapper .contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.resume_wrapper .contact_info .name {
+  text-transform: capitalize;
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  color: #000000;
+}
+.resume_wrapper .contact_info .name .fname {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  color: #ff5757;
+}
+.resume_wrapper .contact_info .tel_mail,
+.resume_wrapper .contact_info .address {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.resume_wrapper .role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.resume_wrapper .role .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.resume_wrapper .role .description {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.resume_wrapper .competencies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.resume_wrapper .competencies .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.resume_wrapper .competencies .keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  text-align: center;
+}
+.resume_wrapper .competencies .keys .item {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.resume_wrapper .experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.resume_wrapper .experience .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.resume_wrapper .experience .experience_ {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.resume_wrapper .experience .name_date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.resume_wrapper .experience .name_date .company_name,
+.resume_wrapper .experience .name_date .date {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.resume_wrapper .experience .role {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.resume_wrapper .experience .description {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 8px;
+}
+.resume_wrapper .experience .accomplishment {
+  margin-top: 15px;
+}
+.resume_wrapper .experience .accomplishment .accomplishment_ {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  text-align: start;
+}
+.resume_wrapper .education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.resume_wrapper .education .title {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.resume_wrapper .education .description {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.resume_wrapper .education .edu_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.resume_wrapper .education .edu_wrapper .institution {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.resume_wrapper .education .edu_wrapper .degree {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}/*# sourceMappingURL=preview.css.map */
