@@ -3,21 +3,24 @@ import "./preview.scss";
 import ClearIcon from "@mui/icons-material/Clear";
 import React, { useEffect, useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setResumePreview } from "../../redux/resumeSlice";
+import { Link } from "react-router-dom";
 // import parse from "html-react-parser";
 
 export default function ResumePreview(props) {
   const editorRef = useRef(null);
   const resumeData = useSelector((state) => state.resume.resumeData);
+  const dispatch = useDispatch();
   // const parse = require("html-react-parser");
   const log = () => {
     if (editorRef.current) {
-      console.log(editorRef.current.getContent());
+      dispatch(setResumePreview(editorRef.current.getContent()));
     }
   };
 
   useEffect(() => {
-    console.log(resumeData);
+    // console.log(resumeData);
   }, []);
 
   return (
@@ -37,15 +40,13 @@ export default function ResumePreview(props) {
         <Editor
           apiKey="nm1z5f6cymv8sfce8f4ngcqwstwxngdkflmnfk0x0yu20twj"
           onInit={(evt, editor) => (editorRef.current = editor)}
-          initialValue={`
+          initialValue= {`
            <div class="resume_wrapper">
             <div class="contact_info">
               <p class="name">
-
-                ${resumeData.contactInfo[0].lastname}
-                <span class="fname">${
-                  resumeData.contactInfo[0].firstname
-                }</span>
+                ${resumeData.contactInfo[0].lastname}  <span class="fname"> ${
+            resumeData.contactInfo[0].firstname
+          }</span>
               </p>
               <p class="tel_mail">
 
@@ -136,20 +137,18 @@ export default function ResumePreview(props) {
               "help",
               "wordcount",
             ],
-            toolbar:
-              "undo redo | blocks | " +
-              "bold italic forecolor | alignleft aligncenter " +
-              "alignright alignjustify | bullist numlist outdent indent | " +
-              "removeformat | help",
+            toolbar: "fontfamily fontsize | forecolor | bold | italic",
+            font_size_formats:
+              "6px 8px 10px 12px 14px 16px 20px 24px 30px 34px 40px 42px 48px ",
             content_style:
               "body { font-family:Roboto,Arial,sans-serif; font-size:24px } .resume_wrapper .name{text-transform:capitalize !important; font-size:30px !important;  } .resume_wrapper p{ margin:0px;padding:0px} .resume_wrapper { padding: 50px;margin:50px; box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.266), -2px -2px 3px rgba(0, 0, 0, 0.266); } .resume_wrapper hr { margin: 30px 0px; } .resume_wrapper .contact_info, .resume_wrapper .role, .resume_wrapper .competencies, .resume_wrapper .experience, .resume_wrapper .education { display: flex; flex-direction: column; align-items: center; } .resume_wrapper .contact_info .name, .resume_wrapper .role .title, .resume_wrapper .competencies .title,.resume_wrapper .experience .title, .resume_wrapper .education .edu_wrapper{    display: flex;align-items: flex-start; }, .resume_wrapper .experience .title, .resume_wrapper .education .title { font-family: Crimson Pro; font-style: normal; font-weight: 400; font-size: 15px; color: #000000; text-transform: uppercase; } .resume_wrapper .contact_info .name .fname { color: #ff5757; } .resume_wrapper .contact_info .tel_mail, .resume_wrapper .contact_info .address, .resume_wrapper .role .description, .resume_wrapper .competencies .keys .item, .resume_wrapper .experience .role,  .resume_wrapper .experience .description, .resume_wrapper .experience .accomplishment .accomplishment_, .resume_wrapper .education .description,.resume_wrapper .education .edu_wrapper .degree { font-family: Roboto,Arial,sans-serif ; font-style: normal; font-weight: 400; font-size: 16px; color: #000000; } .resume_wrapper .experience .experience_ { width: 100%; margin-bottom: 20px; display: flex; flex-direction: column; align-items: flex-start; } .resume_wrapper .experience .name_date { width: 100%; display: flex; justify-content: space-between; } .resume_wrapper .experience .name_date .company_name, .resume_wrapper .experience .name_date .date,.resume_wrapper .experience .role,.resume_wrapper .education .edu_wrapper .institution  { font-weight: 600;font-family: Roboto,Arial,sans-serif;font-size:16px;color:#000000;font-style:normal; } .resume_wrapper .experience .accomplishment { margin-top: 15px; } .resume_wrapper .competencies .keys { width: 100%; text-align: center; display: grid; grid-template-columns: 1fr 1fr 1fr; } .resume_wrapper .competencies .keys .items{     font-family: Roboto,Arial,sans-serif;font-style: normal;font-weight: 400;font-size: 16px;color: #000000;margin-top: 8px; } .resume_wrapper .experience .accomplishment .accomplishment_ { text-align: start; } .resume_wrapper .experience .description { margin-top: 8px; } .resume_wrapper img { max-width: 100%; height: auto; }.contact_info .name{font-family:Crimson Pro;} .resume_wrapper .role .title, .resume_wrapper .competencies .title, .resume_wrapper .experience .title, .resume_wrapper .education .title{text-transform:uppercase;font-family: Crimson Pro;font-style: normal;font-weight: 400;font-size: 15px;color: #000000;text-transform: uppercase; } .resume_wrapper .education .edu_wrapper {width: 100%;flex-direction: column;align-items: flex-start;}.resume_wrapper .role .description { font-style: italic } .resume_wrapper .experience .accomplishment ul li {font-family: Roboto,Arial,sans-serif ; font-style: normal; font-weight: 400; font-size: 16px; color: #000000;}  .resume_wrapper .experience .accomplishment ul { margin:0px;}",
             // editor_css: "./preview.scss?" + new Date().getTime(),
           }}
         />
         <div className="btn">
-          <button type="button" onClick={log}>
+          <Link to="/resume" target="_blank" type="button" onClick={log}>
             Save Resume
-          </button>
+          </Link>
         </div>
       </>
     </Dialog>

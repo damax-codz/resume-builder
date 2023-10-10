@@ -39,6 +39,7 @@ export default function Experience() {
   useEffect(() => {
     let html = convertToHTML(editorState.getCurrentContent());
     setConvertedContent(html);
+    console.log(resumeData);
   }, [editorState]);
   return (
     <div className="fill_wrapper">

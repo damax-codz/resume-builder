@@ -6,12 +6,13 @@ import WorkIcon from "@mui/icons-material/Work";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import SchoolIcon from "@mui/icons-material/School";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { NavLink, useNavigate } from "react-router-dom";
-import { IconButton } from "@mui/material";
+import { clearReducer } from "../../redux/resumeSlice";
+import { useDispatch } from "react-redux";
 
 export default function Nav() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const links = [
     {
       name: "Contact Info",
@@ -61,11 +62,9 @@ export default function Nav() {
         </div>
       </div>
 
-      <div className="preview_wrapper">
-        <div className="preview">
-          <span className="preview_">preview</span>
-        </div>
-      </div>
+      <button type="button" onClick={() => dispatch(clearReducer())}>
+        Clear Resume
+      </button>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../../../components/header/Header";
 import { Formik } from "formik";
@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
-import { addEducation, clearReducer } from "../../../redux/resumeSlice";
+import { addEducation } from "../../../redux/resumeSlice";
 import ResumePreview from "../../../components/dialog/ResumePreview";
 
 export default function Education() {
@@ -25,6 +25,10 @@ export default function Education() {
   function togglePreview() {
     setOpenPreview(!OpenPreview);
   }
+
+  useEffect(() => {
+    // console.log(resumeData);
+  }, []);
 
   return (
     <>
@@ -132,11 +136,8 @@ export default function Education() {
                   >
                     Back
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => dispatch(clearReducer())}
-                  >
-                    Clear Resume
+                  <button type="button" onClick={() => togglePreview()}>
+                    Preview Resume
                   </button>
                 </div>
               </form>

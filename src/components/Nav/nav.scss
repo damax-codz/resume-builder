@@ -86,4 +86,13 @@
       }
     }
   }
+  button {
+    padding: 10px 10px;
+    @include font(Montserrat, normal, 400, 12px, #000000);
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+  }
 }

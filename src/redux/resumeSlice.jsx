@@ -7,6 +7,7 @@ const initialState = {
     competencies: [],
     experiences: [],
     education: [],
+    resumePreview: "",
   },
 };
 
@@ -29,6 +30,9 @@ export const resumeSlice = createSlice({
     addEducation: (state, action) => {
       state.resumeData.education.push(action.payload);
     },
+    setResumePreview: (state, action) => {
+      state.resumeData.resumePreview = action.payload;
+    },
 
     clearReducer: (state) => {
       state.resumeData.contactInfo = [];
@@ -36,6 +40,7 @@ export const resumeSlice = createSlice({
       state.resumeData.competencies = [];
       state.resumeData.experiences = [];
       state.resumeData.education = [];
+      state.resumeData.resumePreview = " ";
     },
   },
 });
@@ -48,6 +53,7 @@ export const {
   addExperience,
   addEducation,
   clearReducer,
+  setResumePreview,
 } = resumeSlice.actions;
 
 export default resumeSlice.reducer;

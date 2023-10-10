@@ -27,13 +27,14 @@
       gap: 6px;
       padding: 10px;
       box-sizing: border-box;
-      button {
+      a {
         padding: 10px 10px;
         @include font(Montserrat, normal, 600, 18px, #ffffff);
         background-color: #7e3af2;
         border: 1px solid #7e3af2;
         border-radius: 8px;
         cursor: pointer;
+        text-decoration: none;
       }
       .back {
         background-color: #ffffff;
@@ -75,6 +76,7 @@
     }
     .description {
       @include font("Roboto", italic, 400, 16px, #000000);
+      text-align: initial;
     }
   }
   .competencies {
