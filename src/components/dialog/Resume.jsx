@@ -8,7 +8,7 @@ export default function Resume() {
   const parse = require("html-react-parser");
 
   useEffect(() => {
-    console.log(resumeData);
+    // console.log(resumeData);
     setTimeout(() => {
       window.print();
     }, 2000);
