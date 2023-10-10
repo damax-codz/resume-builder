@@ -9,7 +9,7 @@ export default function Loading() {
   useEffect(() => {
     setTimeout(() => {
       navigate("/dashboard/contact");
-    }, 2000);
+    }, 5000);
   }, []);
 
   return (

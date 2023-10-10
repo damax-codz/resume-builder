@@ -20,6 +20,27 @@
         @include font(Montserrat, normal, 600, 20px, #33343d);
       }
     }
+    .btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      padding: 10px;
+      box-sizing: border-box;
+      button {
+        padding: 10px 10px;
+        @include font(Montserrat, normal, 600, 18px, #ffffff);
+        background-color: #7e3af2;
+        border: 1px solid #7e3af2;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .back {
+        background-color: #ffffff;
+        color: #33343d61;
+        border: 1px solid rgba(0, 0, 0, 0.206);
+      }
+    }
   }
 }
 .resume_wrapper {
@@ -106,6 +127,7 @@
     .description {
       @include font("Roboto", normal, 400, 16px, #000000);
       margin-top: 8px;
+      text-align: start;
     }
     .accomplishment {
       margin-top: 15px;
